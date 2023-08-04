@@ -123,8 +123,14 @@
     // ❗ Important Notes:
     // 🧠 Try to solve this problem without looking at how you solved the previous one.
     // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-    function stripChar() {
-
+    function stripChar(string, char) {
+      let stringFinal = ''
+      for(let i = 0; i < string.length; i++) {
+        if(string[i] !== char){
+          stringFinal = stringFinal + string[i]
+        }
+      }
+      return stringFinal
     }
 
     // 👉 CHALLENGE 9
