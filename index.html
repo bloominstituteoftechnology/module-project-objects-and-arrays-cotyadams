@@ -142,8 +142,16 @@
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps() {
-
+    function getProps(obj) {
+      let arr = []
+      let count = 0
+      for (let prop in obj) {
+        if(prop !== 'age' && prop !== 'married') {
+          arr[count] = prop
+        }
+        count ++
+      }
+      return arr
     }
 
     // 🧪 TESTS, do not work below this line
