@@ -44,7 +44,10 @@
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
     
     function deletePrice(obj) {
-      delete obj['price']
+      if (obj.price === undefined) {
+        obj.priceless = true
+      }
+      delete obj.price
       return obj
     }
 
